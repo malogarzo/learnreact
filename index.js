@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 // console.log('Hola mundo');
 
-const app = document.getElementById('app')
+const app = document.getElementById('app');
 
 // ReactDOM.render(qué, donde);
-const helloWorld = <h1>Hello world!</h1>;    
+const helloWorld = <h1>Hello friend!</h1>;    
 ReactDOM.render(helloWorld , app);
 

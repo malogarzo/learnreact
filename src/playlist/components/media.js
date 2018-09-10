@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './media.css';
 
-class Media extends React.Component {
+class Media extends Component {
+  state = {
+    author: 'Mariano'
+  }
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     author: props.author
+  //   }
+  // }
   handleClick = (event) => {
-    console.log(this.props.image)
+    this.setState({
+      author: 'Carlos',
+    })
   }
   render() {
       const styles = {
@@ -25,7 +36,7 @@ class Media extends React.Component {
               height={160}
              />
              <h3 className="Media-title">{this.props.title}</h3>
-             <p className="Media-author">{this.props.author}</p>
+             <p className="Media-author">{this.state.author}</p>
           </div>
         </div>	
     )

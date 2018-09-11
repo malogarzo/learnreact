@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Media from './src/playlist/components/media.js'
+import Media from './src/playlist/components/media.js';
+import data from './src/api.json';
 
 // console.log('Hola mundo');
 

@@ -7,7 +7,7 @@
       "playlist": [
         {
           "title": "¿Qué es responsive Design?",
-          "author": "LeonidasEsteban",
+          "author": "@malogarzo",
           "type": "video",
           "cover": "./images/owilde.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
@@ -15,9 +15,9 @@
         },
         {
           "title": "Cómo optimzar la carga de un website",
-          "author": "LeonidasEsteban",
+          "author": "@malogarzo",
           "type": "video",
-          "cover": "./images/owilde.jpg",
+          "cover": "./images/jlborges.jpg",
           "src": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
           "id": 2
         },

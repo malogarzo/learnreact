@@ -4,7 +4,7 @@ import './media.css';
 
 class Media extends PureComponent {
   state = {
-    author: 'Leonidas Esteban'
+    author: '@malogarzo'
   }
   // constructor(props) {
   //   super(props)

@@ -1,0 +1,32 @@
+.Categories {
+	padding: 10px;
+	overflow: hidden;
+	background: white;
+	display: flex;
+}
+
+.categoryTitle{
+	display: block;
+	text-align: left;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+.categoryDescription{
+	display: block;
+	text-align: left;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+body {
+	margin: 0;
+	font-family: Arial;
+	background: #171c30;
+}
+
+.homeLayout{
+	display: flex;
+	margin: 0 auto;
+	min-height: 100vh;
+}

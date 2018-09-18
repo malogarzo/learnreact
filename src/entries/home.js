@@ -6,8 +6,8 @@ import data from '../api.json';
 
 // console.log('Hola mundo');
 
-const app = document.getElementById('app');
+const homeContainer = document.getElementById('home-container');
 
-// ReactDOM.render(qué, donde);
+// ReactDOM.render(qué voy a renderizar, donde lo voy a renderizar);
 // const helloWorld = <h1>Hello friend!</h1>;    
-render( <Home data={data} />, app);
+render( <Home data={data} />, homeContainer);

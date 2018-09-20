@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import HomeLayout from '../components/home-layout';
 import Categories from '../../categories/components/categories';
 import Related from '../components/related';

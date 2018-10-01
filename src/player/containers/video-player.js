@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import VideoPlayerLayout from '../components/video-player-layout.js'
 import Video from '../components/video.js';
 import Title from '../components/title.js';
-import PlayPause from '../components/play-pause';
+import PlayPause from '../components/play-pause.js';
 
 class VideoPlayer extends Component {
   state = {

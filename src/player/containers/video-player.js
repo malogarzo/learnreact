@@ -6,12 +6,16 @@ import PlayPause from '../components/play-pause.js';
 import Timer from '../components/timer.js';
 import Controls from '../components/video-player-controls.js';
 import ProgressBar from '../components/progress-bar.js';
+import Spinner from '../components/spinner.js';
+import Volume from '../components/volume.js';
+import Fullscreen from '../components/fullscreen.js';
 
 class VideoPlayer extends Component {
   state = {
     pause: true,
     duration: 0,
     currentTime: 0,
+    loading: false
   }
   togglePlay = (event) => {
     this.setState({
@@ -38,9 +42,34 @@ class VideoPlayer extends Component {
   handleProgressChange = event => {
     this.video.currentTime = event.target.value
   }
+  handleSeeking = event => {
+    this.setState({
+      loading: true
+    })
+  }
+  handleSeeked = event => {
+    this.setState({
+      loading: false
+    })
+  }
+  handleVolumeChange = event => {
+    this.video.volume = event.target.value;
+  }
+  handleFullScreenClick = event => {
+    if(!document.webkitIsFullScreen) {
+      this.player.webkitRequestFullscreen()
+    } else {
+      document.ExitFullscreen();
+    }
+  }
+  setRef = element => {
+    this.player = element
+  }
   render() {
     return (
-      <VideoPlayerLayout>
+      <VideoPlayerLayout
+        setRef={this.setRef}
+      >
         <Title
           title="Video"
         />
@@ -58,13 +87,24 @@ class VideoPlayer extends Component {
             value={this.state.currentTime}
             handleProgressChange={this.handleProgressChange}
           />
+          <Volume
+            handleVolumeChange={this.handleVolumeChange}
+          />
+          <Fullscreen 
+            handleFullScreenClick  
+          />
         </Controls>
+        <Spinner
+          active={this.state.loading}
+        >
         <Video
           autoplay={this.props.autoplay}
           pause={this.state.pause}
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}
-          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          handleSeeking={this.handleSeeking}
+          handleSeeked={this.handleSeeked}
+          src={this.props.src}
         />
       </VideoPlayerLayout>
     )

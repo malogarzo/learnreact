@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import VideoPlayerLayout from '../components/video-player-layout.js'
-import Video from '../components/video.js';
-import Title from '../components/title.js';
-import PlayPause from '../components/play-pause.js';
-import Timer from '../components/timer.js';
-import Controls from '../components/video-player-controls.js';
-import ProgressBar from '../components/progress-bar.js';
-import Spinner from '../components/spinner.js';
-import Volume from '../components/volume.js';
-import Fullscreen from '../components/fullscreen.js';
+import VideoPlayerLayout from '../components/video-player-layout';
+import Video from '../components/video';
+import Title from '../components/title';
+import PlayPause from '../components/play-pause';
+import Timer from '../components/timer';
+import Controls from '../components/video-player-controls';
+import ProgressBar from '../components/progress-bar';
+import Spinner from '../components/spinner';
+import Volume from '../components/volume';
+import Fullscreen from '../components/fullscreen';
 
 class VideoPlayer extends Component {
   state = {

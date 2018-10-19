@@ -96,7 +96,7 @@ class VideoPlayer extends Component {
         </Controls>
         <Spinner
           active={this.state.loading}
-        >
+        />
         <Video
           autoplay={this.props.autoplay}
           pause={this.state.pause}

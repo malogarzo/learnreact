@@ -1,9 +1,8 @@
 import React from 'react';
-import FullScreenIcon from '../../icons/components/fullscreen.js';
+import FullScreenIcon from '../../icons/components/fullscreen';
 import './fullscreen.css';
 
 const FullScreen = (props) => {
-  return (
     <div 
       className="Fullscreen"
       onClick={props.handleFullScreenClick}
@@ -12,8 +11,7 @@ const FullScreen = (props) => {
       size={25}
       color="white"
     />
-  </div>  
-  )
+  </div>
 }
 
 export default FullScreen;

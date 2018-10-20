@@ -39,6 +39,7 @@ class Home extends Component {
                 <VideoPlayer 
                   autoplay
                 />
+                <h1>Esto es un modal</h1>
               </Modal>
             </ModalContainer>
           }

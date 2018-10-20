@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react'
-import VideoPlayerLayout from '../components/video-player-layout'
-import Video from '../components/video'
-import Title from '../components/title'
-import PlayPause from '../components/play-pause'
-import Timer from '../components/timer'
-import Controls from '../components/video-player-controls'
-import ProgressBar from '../components/progress-bar'
-import Spinner from '../components/spinner'
-import Volume from '../components/volume'
-import FullScreen from '../components/fullscreen'
-=======
 import React, { Component } from 'react';
 import VideoPlayerLayout from '../components/video-player-layout';
 import Video from '../components/video';
@@ -22,14 +9,13 @@ import ProgressBar from '../components/progress-bar';
 import Spinner from '../components/spinner';
 import Volume from '../components/volume';
 import Fullscreen from '../components/fullscreen';
->>>>>>> a1f01de49c696e7db449cbaa3faa4515418ede20
 
 class VideoPlayer extends Component {
   state = {
     pause: true,
     duration: 0,
     currentTime: 0,
-    loading: false
+    loading: false,
   }
   togglePlay = (event) => {
     this.setState({
@@ -48,7 +34,7 @@ class VideoPlayer extends Component {
     });
   }
   handleTimeUpdate = event => {
-    // console.log(this.video.currentTime)
+    console.log(this.video.currentTime)
     this.setState({
       currentTime: this.video.currentTime
     })
@@ -120,7 +106,7 @@ class VideoPlayer extends Component {
           handleTimeUpdate={this.handleTimeUpdate}
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}
-          src={this.  props.src}
+          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
         />
       </VideoPlayerLayout>
     )

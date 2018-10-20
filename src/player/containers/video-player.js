@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import VideoPlayerLayout from '../components/video-player-layout.js'
-import Video from '../components/video.js';
-import Title from '../components/title.js';
-import PlayPause from '../components/play-pause.js';
-import Timer from '../components/timer.js';
-import Controls from '../components/video-player-controls.js';
-import ProgressBar from '../components/progress-bar.js';
-import Spinner from '../components/spinner.js';
-import Volume from '../components/volume.js';
-import Fullscreen from '../components/fullscreen.js';
+import React, { Component } from 'react'
+import VideoPlayerLayout from '../components/video-player-layout'
+import Video from '../components/video'
+import Title from '../components/title'
+import PlayPause from '../components/play-pause'
+import Timer from '../components/timer'
+import Controls from '../components/video-player-controls'
+import ProgressBar from '../components/progress-bar'
+import Spinner from '../components/spinner'
+import Volume from '../components/volume'
+import FullScreen from '../components/fullscreen'
 
 class VideoPlayer extends Component {
   state = {
@@ -34,7 +34,7 @@ class VideoPlayer extends Component {
     });
   }
   handleTimeUpdate = event => {
-    console.log(this.video.currentTime)
+    // console.log(this.video.currentTime)
     this.setState({
       currentTime: this.video.currentTime
     })
@@ -71,7 +71,7 @@ class VideoPlayer extends Component {
         setRef={this.setRef}
       >
         <Title
-          title="Video"
+          title={this.props.title}
         />
         <Controls>
           <PlayPause
@@ -89,9 +89,11 @@ class VideoPlayer extends Component {
           />
           <Volume
             handleVolumeChange={this.handleVolumeChange}
+            // handleVolumeToggle = {this.handleVolumeToggle}
+            // volume = {this.state.volume}
           />
           <Fullscreen 
-            handleFullScreenClick  
+            handleFullScreenClick = {this.handleFullScreenClick}
           />
         </Controls>
         <Spinner
@@ -104,7 +106,7 @@ class VideoPlayer extends Component {
           handleTimeUpdate={this.handleTimeUpdate}
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}
-          src={this.props.src}
+          src={this.  props.src}
         />
       </VideoPlayerLayout>
     )
